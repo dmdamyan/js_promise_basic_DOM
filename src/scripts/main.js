@@ -4,7 +4,7 @@ const logo = document.querySelector('.logo');
 
 const promise1 = new Promise((resolve) => {
   logo.addEventListener('click', () => {
-    success();
+    resolve();
   });
 });
 
@@ -30,4 +30,5 @@ function error() {
   document.body.appendChild(errorMessage);
 }
 
-promise1.then(success).catch(promise2.catch(error));
+promise1.then(success).catch(error);
+promise2.then(success).catch(error);
